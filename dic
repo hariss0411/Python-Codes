@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict
+n,m=map(int,input().split())
+A,B=[],[]
+pos=defaultdict(list)
+for _ in range(n):
+    A.append(input())
+for _ in range(m):
+    B.append(input())
+for i in range(m):
+    if B[i] in A:
+        pos[B[i]]+=([j+1  for j in range(n) if B[i]==A[j]])
+    else:
+        pos[B[i]].append(-1)
+
+co=0
+for i in B:
+    print(*pos[i],sep=" ")
+    co += 1
+    print(co)
+
+print(co)

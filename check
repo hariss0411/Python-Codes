@@ -1,0 +1,12 @@
+'''from datetime import date
+import sys
+
+a=(2014, 7, 2)
+f_date = date(2014, 7, 2)
+#l_date = date(arg[-10:])
+#delta = l_date - f_date
+#print(delta.days)
+print(f_date)'''
+a="srfs"
+a=a[0].upper()+a[1:-1]+a[-1].upper()
+print(a)
